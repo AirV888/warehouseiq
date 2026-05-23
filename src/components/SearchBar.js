@@ -13,10 +13,7 @@ export default function SearchBar({ value, onChange, onSearch, onScanClick, onSe
     const q = value.trim().toUpperCase();
     if (!q) return [];
     return products
-      .filter(p =>
-        p.PartID_upper.includes(q) ||
-        p.PartDescription.toUpperCase().includes(q)
-      )
+      .filter(p => p.PartID_upper.includes(q))
       .slice(0, 8);
   }, [value, products]);
 
