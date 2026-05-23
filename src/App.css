@@ -222,8 +222,8 @@ body {
 .part-id-label {
   padding: 16px 20px 4px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 2rem; letter-spacing: 3px;
-  color: var(--muted);
+  font-size: 2rem; font-weight: 800; letter-spacing: 3px;
+  color: var(--text);
 }
 .part-desc {
   padding: 0 20px 16px;
