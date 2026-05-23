@@ -98,7 +98,7 @@ export default function App() {
       ) : (
         <div className="home">
           <header className="app-header">
-            <div className="logo-mark" aria-hidden="true">IQ</div>
+            <img className="header-logo" src="/logo.png" alt="BoonmaIQ logo" />
             <h1 className="app-title">BoonmaIQ</h1>
             <p className="app-subtitle">PART FINDER</p>
           </header>
