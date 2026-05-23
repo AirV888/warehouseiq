@@ -1,0 +1,3102 @@
+[
+  {
+    "PartID": "Em-5527",
+    "PartID_upper": "EM-5527",
+    "PartDescription": "Camry ACV40R 2.4L RH S/bar",
+    "PartBinAddress": "9-A-1-3",
+    "PartBarCode": "9346140015605",
+    "CurrentStock": 181,
+    "PhotoFile": "EM-5527.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5487H",
+    "PartID_upper": "EM-5487H",
+    "PartDescription": "Commodore VE 3.6L V6 Front L/R",
+    "PartBinAddress": "9-A-1-5",
+    "PartBarCode": "9346140015209",
+    "CurrentStock": 334,
+    "PhotoFile": "EM-5487H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5205H",
+    "PartID_upper": "EM-5205H",
+    "PartDescription": "Maz 3, Focus 2.0L 04-14 RH Hyd",
+    "PartBinAddress": "9-A-5-5",
+    "PartBarCode": "9346140012321",
+    "CurrentStock": 466,
+    "PhotoFile": "EM-5205H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5536",
+    "PartID_upper": "EM-5536",
+    "PartDescription": "Aur GSV40/50 3.5 RH SBar 160mm",
+    "PartBinAddress": "9-A-2-3",
+    "PartBarCode": "9346140016299",
+    "CurrentStock": 199,
+    "PhotoFile": "EM-5536.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5626H",
+    "PartID_upper": "EM-5626H",
+    "PartDescription": "Mazda 2 1.5L 07-on RH  A&M",
+    "PartBinAddress": "12-A-2-5",
+    "PartBarCode": "9346140023808",
+    "CurrentStock": 320,
+    "PhotoFile": "EM-5626H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5918H",
+    "PartID_upper": "EM-5918H",
+    "PartDescription": "Mazda 3 2.0L 09-13 RH Hydro",
+    "PartBinAddress": "9-B-1-5",
+    "PartBarCode": "9346140027561",
+    "CurrentStock": 343,
+    "PhotoFile": "EM-5918H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5203",
+    "PartID_upper": "EM-5203",
+    "PartDescription": "Mazda 3 2.0,2.3L 04-on Rear mt",
+    "PartBinAddress": "9-A-3-3",
+    "PartBarCode": "9346140012284",
+    "CurrentStock": 270,
+    "PhotoFile": "EM-5203.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5204B",
+    "PartID_upper": "EM-5204B",
+    "PartDescription": "Mazda 3 2.0,2.2L 09-on LH At",
+    "PartBinAddress": "9-A-4-3",
+    "PartBarCode": "9346140012314",
+    "CurrentStock": 442,
+    "PhotoFile": "EM-5204B.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "CRB-9001H",
+    "PartID_upper": "CRB-9001H",
+    "PartDescription": "VT-VZ Frt RadiusRod hydro bush",
+    "PartBinAddress": "12-A-1-5",
+    "PartBarCode": "9346140017487",
+    "CurrentStock": 483,
+    "PhotoFile": "CRB-9001H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5943",
+    "PartID_upper": "EM-5943",
+    "PartDescription": "Dualis,X-trail 07-on Rear TRod",
+    "PartBinAddress": "14-A-6-4",
+    "PartBarCode": "9346140028605",
+    "CurrentStock": 373,
+    "PhotoFile": "EM-5943.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-6013RH",
+    "PartID_upper": "EM-6013RH",
+    "PartDescription": "BT50/Ranger PX 11-15 Front RH",
+    "PartBinAddress": "9-A-2-5",
+    "PartBarCode": "9346140032992",
+    "CurrentStock": 365,
+    "PhotoFile": "EM-6013RH.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5001",
+    "PartID_upper": "EM-5001",
+    "PartDescription": "Camry ACV36R 2.4 02-on RH Sbar",
+    "PartBinAddress": "9-A-5-3",
+    "PartBarCode": "9346140010105",
+    "CurrentStock": 609,
+    "PhotoFile": "EM-5001.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5539B",
+    "PartID_upper": "EM-5539B",
+    "PartDescription": "Tar ACR50,Rav 2.4L 06-on RH Hy",
+    "PartBinAddress": "9-B-3-5",
+    "PartBarCode": "9346140025536",
+    "CurrentStock": 386,
+    "PhotoFile": "EM-5539B.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-6027H",
+    "PartID_upper": "EM-6027H",
+    "PartDescription": "G.Cherokee 3.0,3.6L V6 Frt L/R",
+    "PartBinAddress": "11-A-5-5",
+    "PartBarCode": "9346140033159",
+    "CurrentStock": 265,
+    "PhotoFile": "EM-6027H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-2006H",
+    "PartID_upper": "EM-2006H",
+    "PartDescription": "Comm. VN-VT V6 Frnt Hydro L/R",
+    "PartBinAddress": "9-A-1-2",
+    "PartBarCode": "9346140002001",
+    "CurrentStock": 322,
+    "PhotoFile": "EM-2006H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5018",
+    "PartID_upper": "EM-5018",
+    "PartDescription": "Corolla ZZE123 1.8L 03-on RH",
+    "PartBinAddress": "9-A-3-2",
+    "PartBarCode": "9346140010280",
+    "CurrentStock": 276,
+    "PhotoFile": "EM-5018.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5428H",
+    "PartID_upper": "EM-5428H",
+    "PartDescription": "Civic 1.8L 06-on RH Hydro mnt",
+    "PartBinAddress": "10-A-7-5",
+    "PartBarCode": "9346140014615",
+    "CurrentStock": 359,
+    "PhotoFile": "EM-5428H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5512H",
+    "PartID_upper": "EM-5512H",
+    "PartDescription": "Comm. VE, VF V8 06-on Frnt L/R",
+    "PartBinAddress": "9-B-4-5",
+    "PartBarCode": "9346140015452",
+    "CurrentStock": 330,
+    "PhotoFile": "EM-5512H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-5244H",
+    "PartID_upper": "EM-5244H",
+    "PartDescription": "Getz TB All Eng 02-11 RH Hydro",
+    "PartBinAddress": "9-B-5-5",
+    "PartBarCode": "9346140012727",
+    "CurrentStock": 209,
+    "PhotoFile": "EM-5244H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  },
+  {
+    "PartID": "Em-4953H",
+    "PartID_upper": "EM-4953H",
+    "PartDescription": "Falcon BA,BF 4.0 Front L/R mt",
+    "PartBinAddress": "6-A-1-5",
+    "PartBarCode": "9346140009581",
+    "CurrentStock": 384,
+    "PhotoFile": "EM-4953H.png",
+    "sales": [
+      {
+        "month": "May-23",
+        "qty": 10
+      },
+      {
+        "month": "Jun-23",
+        "qty": 10
+      },
+      {
+        "month": "Jul-23",
+        "qty": 10
+      },
+      {
+        "month": "Aug-23",
+        "qty": 10
+      },
+      {
+        "month": "Sep-23",
+        "qty": 10
+      },
+      {
+        "month": "Oct-23",
+        "qty": 10
+      },
+      {
+        "month": "Nov-23",
+        "qty": 10
+      },
+      {
+        "month": "Dec-23",
+        "qty": 10
+      },
+      {
+        "month": "Jan-24",
+        "qty": 10
+      },
+      {
+        "month": "Feb-24",
+        "qty": 10
+      },
+      {
+        "month": "Mar-24",
+        "qty": 10
+      },
+      {
+        "month": "Apr-24",
+        "qty": 10
+      },
+      {
+        "month": "May-24",
+        "qty": 10
+      },
+      {
+        "month": "Jun-24",
+        "qty": 10
+      },
+      {
+        "month": "Jul-24",
+        "qty": 10
+      },
+      {
+        "month": "Aug-24",
+        "qty": 10
+      },
+      {
+        "month": "Sep-24",
+        "qty": 10
+      },
+      {
+        "month": "Oct-24",
+        "qty": 10
+      },
+      {
+        "month": "Nov-24",
+        "qty": 10
+      },
+      {
+        "month": "Dec-24",
+        "qty": 10
+      },
+      {
+        "month": "Jan-25",
+        "qty": 10
+      },
+      {
+        "month": "Feb-25",
+        "qty": 10
+      },
+      {
+        "month": "Mar-25",
+        "qty": 10
+      },
+      {
+        "month": "Apr-25",
+        "qty": 10
+      },
+      {
+        "month": "May-25",
+        "qty": 10
+      },
+      {
+        "month": "Jun-25",
+        "qty": 10
+      },
+      {
+        "month": "Jul-25",
+        "qty": 10
+      },
+      {
+        "month": "Aug-25",
+        "qty": 10
+      },
+      {
+        "month": "Sep-25",
+        "qty": 10
+      },
+      {
+        "month": "Oct-25",
+        "qty": 10
+      },
+      {
+        "month": "Nov-25",
+        "qty": 10
+      },
+      {
+        "month": "Dec-25",
+        "qty": 10
+      },
+      {
+        "month": "Jan-26",
+        "qty": 10
+      },
+      {
+        "month": "Feb-26",
+        "qty": 10
+      },
+      {
+        "month": "Mar-26",
+        "qty": 10
+      },
+      {
+        "month": "Apr-26",
+        "qty": 10
+      }
+    ]
+  }
+]
