@@ -222,12 +222,12 @@ body {
 .part-id-label {
   padding: 16px 20px 4px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 0.85rem; letter-spacing: 3px;
+  font-size: 2rem; letter-spacing: 3px;
   color: var(--muted);
 }
 .part-desc {
   padding: 0 20px 16px;
-  font-size: 1.2rem; font-weight: 700;
+  font-size: 1.2rem; font-weight: 400;
   color: var(--text); line-height: 1.35;
 }
 .divider { height: 1px; background: var(--border); }
