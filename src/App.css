@@ -350,3 +350,56 @@ body {
   text-align: center; color: var(--muted);
   font-size: 0.85rem; padding: 12px 16px;
 }
+
+/* ─── Typeahead dropdown ────────────────────────────────── */
+.typeahead-group { position: relative; }
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0; right: 0;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  list-style: none;
+  z-index: 200;
+  overflow-y: auto;
+  max-height: calc(8 * 57px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.55);
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 10px 16px;
+  gap: 14px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.suggestion-item:last-child { border-bottom: none; }
+.suggestion-item:hover { background: var(--raised); }
+.suggestion-item:active { background: var(--border); }
+
+.sug-id {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 88px;
+}
+
+.sug-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}

@@ -58,6 +58,13 @@ export default function App() {
     }
   }, [products, addRecent]);
 
+  const handleSelect = useCallback((product) => {
+    setQuery(product.PartID_upper);
+    setResult(product);
+    setNotFound(false);
+    addRecent(product.PartID_upper);
+  }, [addRecent]);
+
   const handleBack = useCallback(() => {
     setResult(null);
     setNotFound(false);
@@ -109,6 +116,8 @@ export default function App() {
               onChange={setQuery}
               onSearch={search}
               onScanClick={() => setScanMode(true)}
+              onSelect={handleSelect}
+              products={products}
             />
             <RecentChips items={recent} onSelect={search} />
           </main>
