@@ -123,7 +123,6 @@ export default function SearchBar({ value, onChange, onSearch, onScanClick, onSe
               spellCheck={false}
               aria-label="Part ID or description search"
               aria-autocomplete="list"
-              aria-expanded={isOpen}
               aria-haspopup="listbox"
             />
             <button
@@ -153,6 +152,7 @@ export default function SearchBar({ value, onChange, onSearch, onScanClick, onSe
                   key={product.PartID_upper}
                   className="suggestion-item"
                   role="option"
+                  aria-selected={false}
                   onMouseDown={(e) => { e.preventDefault(); pickSuggestion(product); }}
                   onTouchEnd={(e) => { e.preventDefault(); pickSuggestion(product); }}
                 >
