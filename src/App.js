@@ -99,7 +99,7 @@ export default function App() {
         <div className="home">
           <header className="app-header">
             <div className="logo-mark" aria-hidden="true">IQ</div>
-            <h1 className="app-title">WarehouseIQ</h1>
+            <h1 className="app-title">BoonmaIQ</h1>
             <p className="app-subtitle">PART FINDER</p>
           </header>
 

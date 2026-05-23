@@ -6,7 +6,7 @@
   --border:    #2A4060;
   --muted:     #748EA4;
   --text:      #F0F4F8;
-  --green:     #00B894;
+  --accent:    #ED1C24;
   --blue:      #3B82F6;
   --amber:     #F59E0B;
   --red:       #EF4444;
@@ -47,7 +47,7 @@ body {
 }
 .splash-logo {
   width: 80px; height: 80px;
-  background: var(--green);
+  background: var(--accent);
   color: var(--bg);
   border-radius: 20px;
   display: flex; align-items: center; justify-content: center;
@@ -58,17 +58,17 @@ body {
 .splash-sub { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
 
 /* ─── Home header ───────────────────────────────────────── */
-.home { padding-top: 40px; }
+.home { padding-top: max(20px, env(safe-area-inset-top)); }
 .app-header { text-align: center; margin-bottom: 32px; }
 .logo-mark {
   display: inline-flex; align-items: center; justify-content: center;
   width: 80px; height: 80px;
-  background: var(--green);
+  background: var(--accent);
   color: var(--bg);
   border-radius: 20px;
   font-size: 28px; font-weight: 900; letter-spacing: 3px;
   margin-bottom: 16px;
-  box-shadow: 0 8px 32px rgba(0,184,148,0.25);
+  box-shadow: 0 8px 32px rgba(237,28,36,0.25);
 }
 .app-title {
   font-size: 2.2rem; font-weight: 800;
@@ -107,7 +107,7 @@ body {
   font-family: -apple-system, sans-serif;
   font-size: 0.95rem;
 }
-.search-input:focus { border-color: var(--green); }
+.search-input:focus { border-color: var(--accent); }
 
 .icon-btn {
   width: 56px; height: 56px;
@@ -136,7 +136,7 @@ body {
 
 .search-btn {
   height: 56px; min-height: var(--tap);
-  background: var(--green);
+  background: var(--accent);
   color: var(--bg);
   border: none;
   border-radius: var(--radius);
@@ -171,10 +171,10 @@ body {
   white-space: nowrap;
   -webkit-appearance: none;
 }
-.chip:active { background: var(--raised); border-color: var(--green); }
+.chip:active { background: var(--raised); border-color: var(--accent); }
 
 /* ─── Result screen ─────────────────────────────────────── */
-.result-screen { padding-top: 16px; padding-bottom: 40px; }
+.result-screen { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: 40px; }
 
 .back-btn {
   display: inline-flex; align-items: center;
@@ -243,7 +243,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: clamp(2.8rem, 12vw, 4.5rem);
   font-weight: 900;
-  color: var(--green);
+  color: var(--accent);
   letter-spacing: 6px;
   line-height: 1.1;
   word-break: break-all;

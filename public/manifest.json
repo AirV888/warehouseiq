@@ -1,6 +1,6 @@
 {
-  "short_name": "WarehouseIQ",
-  "name": "WarehouseIQ Part Finder",
+  "short_name": "BoonmaIQ",
+  "name": "BoonmaIQ Part Finder",
   "description": "Find warehouse parts instantly by Part ID, voice, or barcode scan",
   "start_url": "/",
   "display": "standalone",
