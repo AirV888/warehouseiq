@@ -403,3 +403,65 @@ body {
   text-overflow: ellipsis;
   flex: 1;
 }
+
+/* ─── Stock status — badge, value colour, alert banner ──── */
+.part-id-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 20px 4px;
+  flex-wrap: wrap;
+}
+.part-id-row .part-id-label {
+  padding: 0;
+}
+
+.stock-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 8px;
+}
+.stock-badge--low {
+  background: rgba(245,158,11,0.15);
+  color: #FCD34D;
+  border: 1px solid rgba(245,158,11,0.4);
+}
+.stock-badge--out {
+  background: rgba(239,68,68,0.15);
+  color: #FCA5A5;
+  border: 1px solid rgba(239,68,68,0.4);
+}
+
+.stock-value--low { color: var(--amber); }
+.stock-value--out { color: var(--red); }
+
+.stock-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 20px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  border-top: 1px solid transparent;
+}
+.stock-alert--low {
+  background: rgba(245,158,11,0.08);
+  border-top-color: rgba(245,158,11,0.25);
+  color: #FDE68A;
+}
+.stock-alert--low strong { color: #FCD34D; }
+.stock-alert--low svg { color: var(--amber); }
+.stock-alert--out {
+  background: rgba(239,68,68,0.08);
+  border-top-color: rgba(239,68,68,0.25);
+  color: #FECACA;
+}
+.stock-alert--out strong { color: #FCA5A5; }
+.stock-alert--out svg { color: var(--red); }

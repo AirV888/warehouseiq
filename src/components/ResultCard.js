@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import SalesChart from './SalesChart';
 
+function getStockStatus(currentStock, avg12MthSales) {
+  if (currentStock === 0) return 'out';
+  if (currentStock < avg12MthSales * 3) return 'low';
+  return 'ok';
+}
+
 const PLACEHOLDER = (
   <div className="photo-placeholder" aria-label="No photo available">
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#2A4060" strokeWidth="2">
@@ -39,6 +45,8 @@ export default function ResultCard({ product, query, notFound, onBack }) {
   }
 
   const photoSrc = `/photos/${product.PhotoFile}`;
+  const stockStatus = getStockStatus(product.CurrentStock, product.Avg12MthSales);
+  const threshold = Math.round(product.Avg12MthSales * 3);
 
   return (
     <div className="result-screen">
@@ -61,8 +69,15 @@ export default function ResultCard({ product, query, notFound, onBack }) {
         </div>
 
         <div className="result-body">
-          {/* Part ID + description */}
-          <div className="part-id-label">{product.PartID_upper}</div>
+          {/* Part ID + stock badge + description */}
+          <div className="part-id-row">
+            <div className="part-id-label">{product.PartID_upper}</div>
+            {stockStatus !== 'ok' && (
+              <span className={`stock-badge stock-badge--${stockStatus}`}>
+                {stockStatus === 'out' ? 'Out of stock' : 'Low stock'}
+              </span>
+            )}
+          </div>
           <div className="part-desc">{product.PartDescription}</div>
 
           <div className="divider" />
@@ -79,7 +94,9 @@ export default function ResultCard({ product, query, notFound, onBack }) {
           <div className="stock-row">
             <div className="stock-cell">
               <span className="stock-label">Current Stock</span>
-              <span className="stock-value">{product.CurrentStock.toLocaleString()}</span>
+              <span className={`stock-value${stockStatus !== 'ok' ? ` stock-value--${stockStatus}` : ''}`}>
+                {product.CurrentStock.toLocaleString()}
+              </span>
             </div>
             {product.sales && product.sales.length > 0 && (
               <div className="stock-cell stock-cell--right">
@@ -94,6 +111,19 @@ export default function ResultCard({ product, query, notFound, onBack }) {
             )}
           </div>
 
+          {/* Low / out of stock alert banner */}
+          {stockStatus !== 'ok' && (
+            <div className={`stock-alert stock-alert--${stockStatus}`}>
+              <WarningIcon />
+              <span>
+                {stockStatus === 'out'
+                  ? <><strong>No stock on hand.</strong> Reorder urgently — 90-day import lead time applies.</>
+                  : <><strong>Stock below 90-day cover.</strong> {product.CurrentStock.toLocaleString()} units on hand — under the {threshold}-unit reorder threshold (3× avg monthly sales).</>
+                }
+              </span>
+            </div>
+          )}
+
           {/* Sales chart */}
           {product.sales && product.sales.length > 0 && (
             <div className="chart-section">
@@ -104,6 +134,16 @@ export default function ResultCard({ product, query, notFound, onBack }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function WarningIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
+      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+      <line x1="12" y1="9" x2="12" y2="13"/>
+      <line x1="12" y1="17" x2="12.01" y2="17"/>
+    </svg>
   );
 }
 
