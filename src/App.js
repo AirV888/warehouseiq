@@ -18,7 +18,7 @@ function saveRecent(list) {
 }
 
 export default function App() {
-  const { products, loading, error: loadError } = useProducts();
+  const { products, stockAsAt, loading, error: loadError } = useProducts();
   const [query, setQuery] = useState('');
   const [result, setResult] = useState(null);
   const [notFound, setNotFound] = useState(false);
@@ -101,6 +101,7 @@ export default function App() {
           query={query}
           notFound={notFound}
           onBack={handleBack}
+          stockAsAt={stockAsAt}
         />
       ) : (
         <div className="home">

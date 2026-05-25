@@ -442,6 +442,26 @@ body {
 .stock-value--low { color: var(--amber); }
 .stock-value--out { color: var(--red); }
 
+.stock-as-at {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 3px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.on-order-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  color: #6EE7B7;
+  background: rgba(16,185,129,0.07);
+  border-top: 1px solid rgba(16,185,129,0.2);
+}
+.on-order-note svg { color: #6EE7B7; }
+
 .stock-alert {
   display: flex;
   align-items: flex-start;
