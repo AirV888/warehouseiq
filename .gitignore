@@ -23,3 +23,11 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+
+# Project docs — keep local only
+*.docx
+*.doc
+
+# Windows temp files from file operations
+*.PFJGGh
+public/photos/.*.png.*
