@@ -79,6 +79,9 @@ export default function ResultCard({ product, query, notFound, onBack, stockAsAt
             )}
           </div>
           <div className="part-desc">{product.PartDescription}</div>
+          {product.ProductClass && (
+            <div className="part-class">{product.ProductClass}</div>
+          )}
 
           <div className="divider" />
 

@@ -93,6 +93,7 @@ def convert_csv(csv_path: str) -> list:
             'PartDescription': row.get('PartDescription', '').strip(),
             'PartBinAddress': row.get('PartBinAddress', '').strip(),
             'PartBarCode':    row.get('PartBarCode', '').strip(),
+            'ProductClass':   row.get('Product Class', '').strip(),
             'CurrentStock':   current_stock,
             'OnOrder':        on_order,
             'PhotoFile':      photo_file,
