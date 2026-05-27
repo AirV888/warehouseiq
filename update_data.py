@@ -130,18 +130,34 @@ def bump_sw_version(sw_path: str) -> str:
 def git_push(commit_message: str) -> bool:
     """Stage all changes, commit, and push. Returns True on success."""
     repo = SCRIPT_DIR
+
+    # Paths to stage: data files, service worker, source code, the refresh script + bat.
+    # This way any UI tweak in src/ also rides along with the next data refresh.
+    paths_to_stage = [
+        'public/data/products.json',
+        'public/data/metadata.json',
+        'public/sw.js',
+        'src',
+        'update_data.py',
+        'Refresh App Data.bat',
+    ]
+
     try:
-        subprocess.run(['git', 'add', 'public/data/products.json', 'public/data/metadata.json', 'public/sw.js'],
-                       cwd=repo, check=True)
-        subprocess.run(['git', 'commit', '-m', commit_message],
-                       cwd=repo, check=True)
-        subprocess.run(['git', 'push'],
-                       cwd=repo, check=True)
+        subprocess.run(['git', 'add', '--'] + paths_to_stage, cwd=repo, check=True)
+
+        # If nothing is staged (e.g. running back-to-back with no changes), skip the commit cleanly
+        status = subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=repo)
+        if status.returncode == 0:
+            print('  No changes to commit — repo is already up to date.')
+            return True
+
+        subprocess.run(['git', 'commit', '-m', commit_message], cwd=repo, check=True)
+        subprocess.run(['git', 'push'], cwd=repo, check=True)
         return True
     except subprocess.CalledProcessError as e:
         print(f"\n  ERROR during git operation: {e}")
         print("  Your files are updated locally. Please push manually from Git Bash:")
-        print('  git add public/data/products.json public/data/metadata.json public/sw.js')
+        print('  git add ' + ' '.join(f'"{p}"' if ' ' in p else p for p in paths_to_stage))
         print(f'  git commit -m "{commit_message}"')
         print('  git push')
         return False
