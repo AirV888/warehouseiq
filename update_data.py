@@ -86,6 +86,10 @@ def convert_csv(csv_path: str) -> list:
             on_order = 0
 
         photo_file = photo_map.get(part_id_upper, f'{part_id_upper}.png')
+        # Filenames can't contain / \ : * ? " < > | — and a slash in a URL is
+        # read as a folder divider, which breaks the photo link. Replace any of
+        # these characters with a hyphen to match how the image files are named.
+        photo_file = re.sub(r'[/\\:*?"<>|]', '-', photo_file)
 
         products.append({
             'PartID':         part_id,
