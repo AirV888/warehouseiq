@@ -132,9 +132,32 @@ def bump_sw_version(sw_path: str) -> str:
 
     return f'wiq-v{new_version}'
 
+def clear_stale_git_locks(repo: str) -> None:
+    """Remove leftover git lock files that block commits/pushes.
+
+    A lock file (e.g. .git/HEAD.lock or .git/index.lock) is created while git is
+    mid-operation and deleted when it finishes. If a previous run was interrupted,
+    a stale lock can be left behind, causing 'Unable to create ... .lock: File exists'.
+    This script runs its git commands one at a time and nothing else touches the repo
+    while it runs, so any lock present here is safe to clear.
+    """
+    git_dir = os.path.join(repo, '.git')
+    for lock_name in ('HEAD.lock', 'index.lock'):
+        lock_path = os.path.join(git_dir, lock_name)
+        if os.path.exists(lock_path):
+            try:
+                os.remove(lock_path)
+                print(f'  Cleared a stale git lock ({lock_name}) before pushing.')
+            except OSError as e:
+                print(f'  WARNING: found {lock_name} but could not remove it: {e}')
+
+
 def git_push(commit_message: str) -> bool:
     """Stage all changes, commit, and push. Returns True on success."""
     repo = SCRIPT_DIR
+
+    # Self-heal: clear any leftover lock from an interrupted previous run.
+    clear_stale_git_locks(repo)
 
     # Paths to stage: data files, service worker, source code, the refresh script + bat.
     # This way any UI tweak in src/ also rides along with the next data refresh.
