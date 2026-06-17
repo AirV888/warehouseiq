@@ -31,3 +31,4 @@ yarn-error.log*
 # Windows temp files from file operations
 *.PFJGGh
 public/photos/.*.png.*
+PartFinderApp-Photos V2.xlsx

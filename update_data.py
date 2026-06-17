@@ -30,6 +30,7 @@ DEFAULT_CSV  = os.path.join(SCRIPT_DIR, 'PartFinderAppData_Upload.csv')
 PRODUCTS_JSON = os.path.join(SCRIPT_DIR, 'public', 'data', 'products.json')
 METADATA_JSON = os.path.join(SCRIPT_DIR, 'public', 'data', 'metadata.json')
 SW_JS         = os.path.join(SCRIPT_DIR, 'public', 'sw.js')
+PHOTOS_DIR    = os.path.join(SCRIPT_DIR, 'public', 'photos')
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
 MONTH_RE = re.compile(r'^[A-Z][a-z]{2}-\d{2}$')
@@ -193,6 +194,26 @@ def main():
         json.dump(products, f, separators=(',', ':'))
     on_order_count = sum(1 for p in products if p['OnOrder'] > 0)
     print(f'  Done — {len(products)} parts, {on_order_count} with stock on order')
+
+    # 2b. Photo health check — warn about any part whose photo file is missing.
+    #     This catches missing/misnamed images BEFORE they go live, so a part's
+    #     photo never silently disappears again.
+    missing = [p for p in products
+               if not os.path.exists(os.path.join(PHOTOS_DIR, p['PhotoFile']))]
+    if missing:
+        print(f'\n  ** PHOTO CHECK: {len(missing)} part(s) have NO photo file on disk:')
+        for p in missing:
+            print(f"      {p['PartID']:20} expected: public/photos/{p['PhotoFile']}")
+        print('  These parts will show "No Photo" in the app until an image is added.')
+        # Write the list to a file too, so it is easy to action later.
+        report = os.path.join(SCRIPT_DIR, 'missing_photos.txt')
+        with open(report, 'w', encoding='utf-8') as rf:
+            rf.write('Parts with no photo file on disk (as at this refresh):\n\n')
+            for p in missing:
+                rf.write(f"{p['PartID']}\t-> expected public/photos/{p['PhotoFile']}\n")
+        print(f'  Full list saved to: missing_photos.txt')
+    else:
+        print('\n  OK PHOTO CHECK: every part has a matching photo file.')
 
     # 3. Update metadata.json with stock date
     print('\n[2/3] Updating stock date...')
