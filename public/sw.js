@@ -1,5 +1,5 @@
 /* WarehouseIQ Service Worker — cache-first for data & photos */
-const CACHE = 'wiq-v28';
+const CACHE = 'wiq-v29';
 const PRECACHE = ['/data/products.json'];
 
 self.addEventListener('install', ev => {
