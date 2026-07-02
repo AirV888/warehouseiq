@@ -147,6 +147,19 @@ body {
 }
 .search-btn:active { opacity: 0.88; transform: scale(0.99); }
 
+.last-refresh {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+.last-refresh-date {
+  color: var(--text);
+  font-weight: 700;
+}
+
 /* ─── Recent searches ───────────────────────────────────── */
 .recent-section { margin-top: 36px; }
 .recent-title {
@@ -484,11 +497,4 @@ body {
   color: #FDE68A;
 }
 .stock-alert--low strong { color: #FCD34D; }
-.stock-alert--low svg { color: var(--amber); }
-.stock-alert--out {
-  background: rgba(239,68,68,0.08);
-  border-top-color: rgba(239,68,68,0.25);
-  color: #FECACA;
-}
-.stock-alert--out strong { color: #FCA5A5; }
-.stock-alert--out svg { color: var(--red); }
+.stock-alert--low svg { color: var(--amb

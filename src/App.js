@@ -120,6 +120,11 @@ export default function App() {
               onSelect={handleSelect}
               products={products}
             />
+            {stockAsAt && (
+              <p className="last-refresh">
+                Last Refresh - <span className="last-refresh-date">{stockAsAt}</span>
+              </p>
+            )}
             <RecentChips items={recent} onSelect={search} />
           </main>
         </div>
