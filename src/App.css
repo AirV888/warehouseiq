@@ -80,10 +80,11 @@ body {
 
 /* ─── Search form ───────────────────────────────────────── */
 .search-form { display: flex; flex-direction: column; gap: 10px; }
-.search-row { display: flex; gap: 8px; align-items: stretch; }
+.search-row { display: flex; gap: 6px; align-items: stretch; }
 
 .search-input {
   flex: 1;
+  min-width: 0;
   height: 56px;
   min-height: var(--tap);
   background: var(--surface);
@@ -93,7 +94,7 @@ body {
   font-size: 1.15rem;
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
-  padding: 0 16px;
+  padding: 0 14px;
   outline: none;
   text-transform: uppercase;
   transition: border-color 0.15s;
@@ -109,8 +110,8 @@ body {
 .search-input:focus { border-color: var(--accent); }
 
 .icon-btn {
-  width: 56px; height: 56px;
-  min-width: 56px; min-height: var(--tap);
+  width: 52px; height: 56px;
+  min-width: 52px; min-height: var(--tap);
   background: var(--surface);
   border: 2px solid var(--border);
   border-radius: var(--radius);
