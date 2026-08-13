@@ -639,3 +639,73 @@ body {
   border-radius: 8px;
   padding: 4px 10px;
 }
+
+/* ─── Bin Run — pick-list builder ───────────────────────── */
+.bin-build-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 16px;
+}
+.bin-build-item {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.bin-build-num {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--raised);
+  border-radius: 50%;
+  font-size: 0.8rem; font-weight: 800; color: var(--muted);
+}
+.bin-build-info { flex: 1; min-width: 0; }
+.bin-build-pid {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem; font-weight: 700; color: var(--text); letter-spacing: 1px;
+}
+.bin-build-desc {
+  font-size: 0.82rem; color: var(--muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.bin-build-remove {
+  flex-shrink: 0;
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 1.4rem; line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.bin-build-remove:active { color: var(--red); border-color: var(--red); }
+
+.bin-add-next {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  background: var(--surface);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.bin-add-next:active { background: var(--raised); border-color: var(--muted); }
+
+.bin-add-cancel {
+  display: block;
+  margin: 10px auto 0;
+  background: transparent; border: none;
+  color: var(--muted); font-size: 0.9rem; font-weight: 600;
+  text-decoration: underline; cursor: pointer;
+}
+
+.bin-find-btn { margin-top: 16px; }

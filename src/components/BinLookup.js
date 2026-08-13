@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-const MAX_PARTS = 10;
+import React, { useState, useRef, useMemo } from 'react';
 
 // Natural sort for bin addresses like "15-B-5-3" so segments compare
 // numerically (5 before 11) rather than as text (11 before 5).
@@ -31,33 +29,46 @@ function binCompare(a, b) {
 }
 
 export default function BinLookup({ products, onBack }) {
-  const [text, setText] = useState('');
-  const [results, setResults] = useState(null); // null = input view; object = results view
+  const [items, setItems] = useState([]);       // parts added to the pick list
+  const [adding, setAdding] = useState(true);    // is the search box open?
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState(null);  // null = builder view; array = results view
+  const inputRef = useRef(null);
 
-  // Split on new lines, commas, tabs; trim; uppercase; drop blanks; dedupe.
-  const parseTokens = (raw) => {
-    const seen = new Set();
-    const out = [];
-    raw.split(/[\n,\t]+/).forEach((t) => {
-      const v = t.trim().toUpperCase();
-      if (v && !seen.has(v)) { seen.add(v); out.push(v); }
-    });
-    return out;
+  // Suggestions: match Part ID / description, exclude parts already added.
+  const suggestions = useMemo(() => {
+    const q = query.trim().toUpperCase();
+    if (!q) return [];
+    const chosen = new Set(items.map((p) => p.PartID_upper));
+    return products
+      .filter((p) => p.PartID_upper.includes(q) && !chosen.has(p.PartID_upper))
+      .slice(0, 8);
+  }, [query, products, items]);
+
+  const addItem = (p) => {
+    setItems((prev) =>
+      prev.some((x) => x.PartID_upper === p.PartID_upper) ? prev : [...prev, p]
+    );
+    setQuery('');
+    setAdding(false);
   };
 
-  const tokens = parseTokens(text);
-  const count = tokens.length;
+  const removeItem = (pid) => {
+    setItems((prev) => prev.filter((p) => p.PartID_upper !== pid));
+  };
 
-  const runLookup = () => {
-    const use = tokens.slice(0, MAX_PARTS);
-    const found = [];
-    const missing = [];
-    use.forEach((tok) => {
-      const p = products.find((pr) => pr.PartID_upper === tok);
-      if (p) found.push(p); else missing.push(tok);
-    });
-    found.sort(binCompare);
-    setResults({ found, missing, overflow: tokens.length > MAX_PARTS });
+  const startAdding = () => {
+    setAdding(true);
+    setTimeout(() => inputRef.current && inputRef.current.focus(), 50);
+  };
+
+  const cancelAdding = () => {
+    setAdding(false);
+    setQuery('');
+  };
+
+  const findBins = () => {
+    setResults([...items].sort(binCompare));
   };
 
   // ---------- RESULTS VIEW ----------
@@ -71,53 +82,34 @@ export default function BinLookup({ products, onBack }) {
         <div className="bin-run-header">
           <h2 className="bin-run-title">BIN RUN</h2>
           <p className="bin-run-sub">
-            {results.found.length} {results.found.length === 1 ? 'part' : 'parts'} · sorted by bin
+            {results.length} {results.length === 1 ? 'part' : 'parts'} · sorted by bin
           </p>
         </div>
 
-        {results.overflow && (
-          <div className="bin-run-note">Only the first {MAX_PARTS} Part IDs were used.</div>
-        )}
-
-        {results.found.length > 0 ? (
-          <ol className="bin-run-list">
-            {results.found.map((p) => {
-              const bin = (p.PartBinAddress || '').trim();
-              const out = p.CurrentStock === 0;
-              return (
-                <li key={p.PartID_upper} className="bin-run-row">
-                  <div className="bin-run-bin">{bin || '—'}</div>
-                  <div className="bin-run-info">
-                    <div className="bin-run-pid">{p.PartID_upper}</div>
-                    <div className="bin-run-desc">{p.PartDescription}</div>
-                  </div>
-                  <div className={`bin-run-stock${out ? ' bin-run-stock--out' : ''}`}>
-                    <span className="bin-run-stock-num">{p.CurrentStock.toLocaleString()}</span>
-                    <span className="bin-run-stock-lbl">{out ? 'OUT' : 'in stock'}</span>
-                  </div>
-                </li>
-              );
-            })}
-          </ol>
-        ) : (
-          <p className="bin-run-empty">None of those Part IDs were found.</p>
-        )}
-
-        {results.missing.length > 0 && (
-          <div className="bin-run-missing">
-            <div className="bin-run-missing-head">Not found ({results.missing.length})</div>
-            <div className="bin-run-missing-list">
-              {results.missing.map((m) => (
-                <span key={m} className="bin-run-missing-item">{m}</span>
-              ))}
-            </div>
-          </div>
-        )}
+        <ol className="bin-run-list">
+          {results.map((p) => {
+            const bin = (p.PartBinAddress || '').trim();
+            const out = p.CurrentStock === 0;
+            return (
+              <li key={p.PartID_upper} className="bin-run-row">
+                <div className="bin-run-bin">{bin || '—'}</div>
+                <div className="bin-run-info">
+                  <div className="bin-run-pid">{p.PartID_upper}</div>
+                  <div className="bin-run-desc">{p.PartDescription}</div>
+                </div>
+                <div className={`bin-run-stock${out ? ' bin-run-stock--out' : ''}`}>
+                  <span className="bin-run-stock-num">{p.CurrentStock.toLocaleString()}</span>
+                  <span className="bin-run-stock-lbl">{out ? 'OUT' : 'in stock'}</span>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     );
   }
 
-  // ---------- INPUT VIEW ----------
+  // ---------- BUILDER VIEW ----------
   return (
     <div className="result-screen">
       <button className="back-btn" onClick={onBack} aria-label="Go back">
@@ -126,40 +118,91 @@ export default function BinLookup({ products, onBack }) {
 
       <div className="bin-run-header">
         <h2 className="bin-run-title">BIN RUN</h2>
-        <p className="bin-run-sub">Enter up to {MAX_PARTS} Part IDs — get their bins in picking order.</p>
+        <p className="bin-run-sub">Add parts to your pick list, then find their bins.</p>
       </div>
 
-      <textarea
-        className="bin-run-input"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder={'One Part ID per line…\n\nEM-5551\nAG-0210\nAAMHO1060'}
-        autoCapitalize="characters"
-        autoCorrect="off"
-        autoComplete="off"
-        spellCheck={false}
-        rows={9}
-        aria-label="Part IDs, one per line"
-      />
+      {items.length > 0 && (
+        <ol className="bin-build-list">
+          {items.map((p, i) => (
+            <li key={p.PartID_upper} className="bin-build-item">
+              <span className="bin-build-num">{i + 1}</span>
+              <div className="bin-build-info">
+                <div className="bin-build-pid">{p.PartID_upper}</div>
+                <div className="bin-build-desc">{p.PartDescription}</div>
+              </div>
+              <button
+                className="bin-build-remove"
+                onClick={() => removeItem(p.PartID_upper)}
+                aria-label={`Remove ${p.PartID_upper}`}
+              >
+                ×
+              </button>
+            </li>
+          ))}
+        </ol>
+      )}
 
-      <div className="bin-run-count">
-        <span className={count > MAX_PARTS ? 'over' : ''}>{count}</span> / {MAX_PARTS} entered
-        {count > MAX_PARTS && <span className="bin-run-count-warn"> — extra will be ignored</span>}
-      </div>
+      {adding ? (
+        <div className="search-wrap">
+          <div className="typeahead-group">
+            <input
+              ref={inputRef}
+              className="search-input"
+              type="search"
+              inputMode="numeric"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Enter Part ID…"
+              autoCapitalize="characters"
+              autoCorrect="off"
+              autoComplete="off"
+              spellCheck={false}
+              aria-label="Search part to add"
+              aria-autocomplete="list"
+            />
+            {suggestions.length > 0 && (
+              <ul className="suggestions" role="listbox" aria-label="Matching parts">
+                {suggestions.map((p) => (
+                  <li
+                    key={p.PartID_upper}
+                    className="suggestion-item"
+                    role="option"
+                    aria-selected={false}
+                    onMouseDown={(e) => { e.preventDefault(); addItem(p); }}
+                    onTouchEnd={(e) => { e.preventDefault(); addItem(p); }}
+                  >
+                    <span className="sug-id">{p.PartID_upper}</span>
+                    <span className="sug-desc">{p.PartDescription}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          {items.length > 0 && (
+            <button className="bin-add-cancel" onClick={cancelAdding}>Cancel</button>
+          )}
+        </div>
+      ) : (
+        <button className="bin-add-next" onClick={startAdding}>
+          <PlusIcon /> Add next item
+        </button>
+      )}
 
-      <button
-        className="search-btn"
-        onClick={runLookup}
-        disabled={count === 0}
-        style={count === 0 ? { opacity: 0.5 } : undefined}
-      >
-        FIND BINS
-      </button>
-
-      {text.trim() !== '' && (
-        <button className="bin-run-clear" onClick={() => setText('')}>Clear</button>
+      {items.length > 0 && (
+        <button className="search-btn bin-find-btn" onClick={findBins}>
+          FIND BINS ({items.length})
+        </button>
       )}
     </div>
+  );
+}
+
+function PlusIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: 8, flexShrink: 0 }}>
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
   );
 }
 
