@@ -708,4 +708,9 @@ body {
   text-decoration: underline; cursor: pointer;
 }
 
-.bin-find-btn { margin-top: 16px; }
+.bin-find-btn {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  height: 60px;
+}
