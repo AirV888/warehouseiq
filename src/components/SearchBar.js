@@ -5,8 +5,21 @@ const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 export default function SearchBar({ value, onChange, onSearch, onScanClick, onSelect, products }) {
   const [listening, setListening] = useState(false);
   const [open, setOpen] = useState(false);
+  const [alphaMode, setAlphaMode] = useState(false); // false = number keypad, true = full keyboard
   const recRef = useRef(null);
   const wrapRef = useRef(null);
+  const inputRef = useRef(null);
+
+  // Flip the on-screen keyboard between numbers and letters.
+  // Blur + refocus forces mobile to reload the keyboard in the new mode.
+  const toggleKeypad = () => {
+    setAlphaMode(m => !m);
+    const el = inputRef.current;
+    if (el) {
+      el.blur();
+      setTimeout(() => el.focus(), 60);
+    }
+  };
 
   // Filter against PartID_upper and PartDescription, max 8 results
   const suggestions = useMemo(() => {
@@ -106,9 +119,10 @@ export default function SearchBar({ value, onChange, onSearch, onScanClick, onSe
         <div className="typeahead-group">
           <div className="search-row">
             <input
+              ref={inputRef}
               className="search-input"
               type="search"
-              inputMode="numeric"
+              inputMode={alphaMode ? 'text' : 'numeric'}
               value={value}
               onChange={handleChange}
               onKeyDown={handleKeyDown}
@@ -122,6 +136,16 @@ export default function SearchBar({ value, onChange, onSearch, onScanClick, onSe
               aria-autocomplete="list"
               aria-haspopup="listbox"
             />
+            <button
+              type="button"
+              className="icon-btn keypad-toggle"
+              onClick={toggleKeypad}
+              aria-label={alphaMode ? 'Switch to number keypad' : 'Switch to letter keyboard'}
+              title={alphaMode ? 'Switch to number keypad' : 'Switch to letter keyboard'}
+              style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.02em' }}
+            >
+              {alphaMode ? '123' : 'ABC'}
+            </button>
             <button
               type="button"
               className={`icon-btn${listening ? ' listening' : ''}`}
