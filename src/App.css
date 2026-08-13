@@ -506,3 +506,136 @@ body {
 }
 .stock-alert--out strong { color: #FCA5A5; }
 .stock-alert--out svg { color: var(--red); }
+
+/* ─── Bin Run (multi-part bin lookup) ───────────────────── */
+.bin-run-open {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%;
+  margin-top: 16px;
+  min-height: 52px;
+  padding: 0 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem; font-weight: 700; letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.bin-run-open:active { background: var(--raised); border-color: var(--muted); }
+
+.bin-run-header { margin-bottom: 16px; }
+.bin-run-title {
+  font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; color: var(--text);
+}
+.bin-run-sub { margin-top: 4px; font-size: 0.9rem; color: var(--muted); }
+
+.bin-run-input {
+  width: 100%;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  padding: 14px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.15s;
+}
+.bin-run-input::placeholder {
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.95rem;
+}
+.bin-run-input:focus { border-color: var(--accent); }
+
+.bin-run-count {
+  margin: 10px 2px 16px;
+  font-size: 0.85rem; font-weight: 600; color: var(--muted);
+}
+.bin-run-count .over { color: var(--amber); }
+.bin-run-count-warn { color: var(--amber); font-weight: 600; }
+
+.bin-run-clear {
+  display: block;
+  margin: 12px auto 0;
+  background: transparent; border: none;
+  color: var(--muted); font-size: 0.9rem; font-weight: 600;
+  text-decoration: underline; cursor: pointer;
+}
+
+.bin-run-note {
+  margin-bottom: 14px; padding: 10px 12px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.4);
+  border-radius: 10px;
+  color: var(--amber); font-size: 0.85rem; font-weight: 600;
+}
+
+.bin-run-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.bin-run-row {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+.bin-run-bin {
+  flex-shrink: 0;
+  min-width: 92px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.15rem; font-weight: 900;
+  color: #10B981;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+.bin-run-info { flex: 1; min-width: 0; }
+.bin-run-pid {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem; font-weight: 700; color: var(--text);
+  letter-spacing: 1px;
+}
+.bin-run-desc {
+  font-size: 0.82rem; color: var(--muted);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.bin-run-stock {
+  flex-shrink: 0; text-align: right;
+  display: flex; flex-direction: column; align-items: flex-end;
+}
+.bin-run-stock-num { font-size: 1rem; font-weight: 800; color: var(--text); }
+.bin-run-stock-lbl {
+  font-size: 0.6rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted);
+}
+.bin-run-stock--out .bin-run-stock-num,
+.bin-run-stock--out .bin-run-stock-lbl { color: var(--red); }
+
+.bin-run-empty { color: var(--muted); text-align: center; padding: 30px 0; }
+
+.bin-run-missing {
+  margin-top: 20px; padding: 14px;
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.35);
+  border-radius: var(--radius);
+}
+.bin-run-missing-head {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--red); margin-bottom: 10px;
+}
+.bin-run-missing-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.bin-run-missing-item {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem; font-weight: 700; color: #FCA5A5;
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: 8px;
+  padding: 4px 10px;
+}

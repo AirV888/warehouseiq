@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar';
 import ResultCard from './components/ResultCard';
 import RecentChips from './components/RecentChips';
 import BarcodeModal from './components/BarcodeModal';
+import BinLookup from './components/BinLookup';
 import useProducts from './hooks/useProducts';
 import './App.css';
 
@@ -23,6 +24,7 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [notFound, setNotFound] = useState(false);
   const [scanMode, setScanMode] = useState(false);
+  const [binMode, setBinMode] = useState(false);
   const [recent, setRecent] = useState(getRecent);
 
   const addRecent = useCallback((partIdUpper) => {
@@ -95,7 +97,9 @@ export default function App() {
         <BarcodeModal onDetect={searchByBarcode} onClose={() => setScanMode(false)} />
       )}
 
-      {(result || notFound) ? (
+      {binMode ? (
+        <BinLookup products={products} onBack={() => setBinMode(false)} />
+      ) : (result || notFound) ? (
         <ResultCard
           product={result}
           query={query}
@@ -125,10 +129,28 @@ export default function App() {
                 Last Refresh - <span className="last-refresh-date">{stockAsAt}</span>
               </p>
             )}
+
+            <button className="bin-run-open" onClick={() => setBinMode(true)}>
+              <BinRunIcon /> FIND MULTIPLE BINS
+            </button>
+
             <RecentChips items={recent} onSelect={search} />
           </main>
         </div>
       )}
     </div>
+  );
+}
+
+function BinRunIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: 8, flexShrink: 0 }}>
+      <line x1="8" y1="6" x2="21" y2="6" />
+      <line x1="8" y1="12" x2="21" y2="12" />
+      <line x1="8" y1="18" x2="21" y2="18" />
+      <line x1="3" y1="6" x2="3.01" y2="6" />
+      <line x1="3" y1="12" x2="3.01" y2="12" />
+      <line x1="3" y1="18" x2="3.01" y2="18" />
+    </svg>
   );
 }
