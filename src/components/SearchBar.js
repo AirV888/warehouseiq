@@ -108,7 +108,7 @@ export default function SearchBar({ value, onChange, onSearch, onScanClick, onSe
             <input
               className="search-input"
               type="search"
-              inputMode="text"
+              inputMode="numeric"
               value={value}
               onChange={handleChange}
               onKeyDown={handleKeyDown}
