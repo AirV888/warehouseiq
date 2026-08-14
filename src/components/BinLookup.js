@@ -51,20 +51,23 @@ export default function BinLookup({ products, onBack }) {
     );
     setQuery('');
     setAdding(false);
+    if (inputRef.current) inputRef.current.blur(); // dismiss keypad after picking
   };
 
   const removeItem = (pid) => {
     setItems((prev) => prev.filter((p) => p.PartID_upper !== pid));
   };
 
+  // Focus synchronously inside the tap so mobile opens the keypad immediately.
   const startAdding = () => {
+    if (inputRef.current) inputRef.current.focus();
     setAdding(true);
-    setTimeout(() => inputRef.current && inputRef.current.focus(), 50);
   };
 
   const cancelAdding = () => {
-    setAdding(false);
+    if (inputRef.current) inputRef.current.blur();
     setQuery('');
+    setAdding(false);
   };
 
   const findBins = () => {
@@ -142,47 +145,50 @@ export default function BinLookup({ products, onBack }) {
         </ol>
       )}
 
-      {adding ? (
-        <div className="search-wrap">
-          <div className="typeahead-group">
-            <input
-              ref={inputRef}
-              className="search-input"
-              type="search"
-              inputMode="numeric"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Enter Part ID…"
-              autoCapitalize="characters"
-              autoCorrect="off"
-              autoComplete="off"
-              spellCheck={false}
-              aria-label="Search part to add"
-              aria-autocomplete="list"
-            />
-            {suggestions.length > 0 && (
-              <ul className="suggestions" role="listbox" aria-label="Matching parts">
-                {suggestions.map((p) => (
-                  <li
-                    key={p.PartID_upper}
-                    className="suggestion-item"
-                    role="option"
-                    aria-selected={false}
-                    onMouseDown={(e) => { e.preventDefault(); addItem(p); }}
-                    onTouchEnd={(e) => { e.preventDefault(); addItem(p); }}
-                  >
-                    <span className="sug-id">{p.PartID_upper}</span>
-                    <span className="sug-desc">{p.PartDescription}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          {items.length > 0 && (
-            <button className="bin-add-cancel" onClick={cancelAdding}>Cancel</button>
+      {/* Search field stays mounted (hidden when collapsed) so the keypad can
+          be opened synchronously from the Add-next-item tap. */}
+      <div className={`search-wrap bin-search-wrap${adding ? '' : ' collapsed'}`}>
+        <div className="typeahead-group">
+          <input
+            ref={inputRef}
+            className="search-input"
+            type="search"
+            inputMode="numeric"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Enter Part ID…"
+            autoCapitalize="characters"
+            autoCorrect="off"
+            autoComplete="off"
+            spellCheck={false}
+            aria-label="Search part to add"
+            aria-autocomplete="list"
+            tabIndex={adding ? 0 : -1}
+          />
+          {adding && suggestions.length > 0 && (
+            <ul className="suggestions" role="listbox" aria-label="Matching parts">
+              {suggestions.map((p) => (
+                <li
+                  key={p.PartID_upper}
+                  className="suggestion-item"
+                  role="option"
+                  aria-selected={false}
+                  onMouseDown={(e) => { e.preventDefault(); addItem(p); }}
+                  onTouchEnd={(e) => { e.preventDefault(); addItem(p); }}
+                >
+                  <span className="sug-id">{p.PartID_upper}</span>
+                  <span className="sug-desc">{p.PartDescription}</span>
+                </li>
+              ))}
+            </ul>
           )}
         </div>
-      ) : (
+        {adding && items.length > 0 && (
+          <button className="bin-add-cancel" onClick={cancelAdding}>Cancel</button>
+        )}
+      </div>
+
+      {!adding && (
         <button className="bin-add-next" onClick={startAdding}>
           <PlusIcon /> Add next item
         </button>

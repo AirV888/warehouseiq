@@ -511,7 +511,7 @@ body {
 .bin-run-open {
   display: flex; align-items: center; justify-content: center;
   width: 100%;
-  margin-top: 16px;
+  margin-top: 32px;
   min-height: 52px;
   padding: 0 16px;
   background: var(--surface);
@@ -713,4 +713,18 @@ body {
   width: 100%;
   margin-top: 16px;
   height: 60px;
+}
+
+/* Keep the search field mounted but hidden when collapsed, so the keypad
+   can be triggered synchronously from the "Add next item" tap. Uses the
+   visually-hidden pattern (still focusable — not display/visibility:none). */
+.bin-search-wrap.collapsed {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  opacity: 0;
+  pointer-events: none;
 }
