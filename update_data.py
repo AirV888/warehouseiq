@@ -22,7 +22,7 @@ import os
 import sys
 import subprocess
 import argparse
-from datetime import date
+from datetime import date, datetime
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
@@ -38,6 +38,23 @@ MONTH_RE = re.compile(r'^[A-Z][a-z]{2}-\d{2}$')
 def format_date(d: date) -> str:
     """Returns e.g. '26 May 2026'"""
     return d.strftime('%-d %B %Y') if sys.platform != 'win32' else d.strftime('%#d %B %Y')
+
+def parse_promise_date(raw: str) -> str:
+    """Convert a 'dd/mm/yyyy' promise date from the CSV into '20 Aug 2026'.
+
+    Returns '' when the cell is blank or unreadable, so the app can show
+    'date to be confirmed' instead of a broken value.
+    """
+    raw = (raw or '').strip()
+    if not raw:
+        return ''
+    for fmt in ('%d/%m/%Y', '%d/%m/%y', '%Y-%m-%d'):
+        try:
+            d = datetime.strptime(raw, fmt).date()
+            return f"{d.day} {d.strftime('%b %Y')}"
+        except ValueError:
+            continue
+    return raw   # unrecognised format — pass it through rather than lose it
 
 def convert_csv(csv_path: str) -> list:
     """Convert the AutoInfo CSV export to a list of product dicts."""
@@ -86,6 +103,10 @@ def convert_csv(csv_path: str) -> list:
         except (ValueError, TypeError):
             on_order = 0
 
+        promise_date = parse_promise_date(
+            row.get('Promise Date') or row.get('PromiseDate') or row.get('Date Promised') or ''
+        )
+
         photo_file = photo_map.get(part_id_upper, f'{part_id_upper}.png')
         # Filenames can't contain / \ : * ? " < > | — and a slash in a URL is
         # read as a folder divider, which breaks the photo link. Replace any of
@@ -101,6 +122,7 @@ def convert_csv(csv_path: str) -> list:
             'ProductClass':   row.get('Product Class', '').strip(),
             'CurrentStock':   current_stock,
             'OnOrder':        on_order,
+            'PromiseDate':    promise_date,
             'PhotoFile':      photo_file,
             'TotalSales':     total_sales,
             'AvgMonthlySales': avg_monthly,
@@ -217,6 +239,12 @@ def main():
         json.dump(products, f, separators=(',', ':'))
     on_order_count = sum(1 for p in products if p['OnOrder'] > 0)
     print(f'  Done — {len(products)} parts, {on_order_count} with stock on order')
+    promised = sum(1 for p in products if p['OnOrder'] > 0 and p['PromiseDate'])
+    if on_order_count:
+        pct = round(100 * promised / on_order_count)
+        print(f'  Promise dates: {promised} of {on_order_count} on-order parts have one ({pct}%)')
+        if promised < on_order_count:
+            print(f'  {on_order_count - promised} on-order part(s) will show "Promise date: TBC".')
 
     # 2b. Photo health check — warn about any part whose photo file is missing.
     #     This catches missing/misnamed images BEFORE they go live, so a part's

@@ -121,7 +121,12 @@ export default function ResultCard({ product, query, notFound, onBack, stockAsAt
           {product.OnOrder > 0 && (
             <div className="on-order-note">
               <OrderIcon />
-              <span><strong>{product.OnOrder.toLocaleString()} units</strong> on order</span>
+              <div className="on-order-text">
+                <span><strong>{product.OnOrder.toLocaleString()} units</strong> on order</span>
+                <span className={`promise-date${product.PromiseDate ? '' : ' promise-date--tbc'}`}>
+                  Promise date: <strong>{product.PromiseDate || 'TBC'}</strong>
+                </span>
+              </div>
             </div>
           )}
 
