@@ -19,7 +19,7 @@ function saveRecent(list) {
 }
 
 export default function App() {
-  const { products, stockAsAt, loading, error: loadError } = useProducts();
+  const { products, stockAsAt, bagSizes, loading, error: loadError } = useProducts();
   const [query, setQuery] = useState('');
   const [result, setResult] = useState(null);
   const [notFound, setNotFound] = useState(false);
@@ -106,6 +106,7 @@ export default function App() {
           notFound={notFound}
           onBack={handleBack}
           stockAsAt={stockAsAt}
+          bagSize={result ? bagSizes[result.PartID_upper] : null}
         />
       ) : (
         <div className="home">

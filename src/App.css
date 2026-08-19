@@ -521,6 +521,27 @@ body {
 .stock-alert--out svg { color: var(--red); }
 
 /* ─── Bin Run (multi-part bin lookup) ───────────────────── */
+/* ─── Express Post bag size (bottom of the part card) ───── */
+.bag-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.bag-row svg { color: var(--muted); }
+.bag-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--muted);
+}
+.bag-size {
+  margin-left: auto;
+  font-size: 1rem; font-weight: 800; color: var(--text);
+  letter-spacing: 0.5px;
+}
+.bag-size--unknown {
+  font-size: 0.85rem; font-weight: 600; color: var(--muted);
+}
+
 .bin-run-open {
   display: flex; align-items: center; justify-content: center;
   width: 100%;

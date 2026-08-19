@@ -186,9 +186,11 @@ def git_push(commit_message: str) -> bool:
     paths_to_stage = [
         'public/data/products.json',
         'public/data/metadata.json',
+        'public/data/bagsizes.json',
         'public/sw.js',
         'src',
         'update_data.py',
+        'build_bagsizes.py',
         'Refresh App Data.bat',
     ]
 

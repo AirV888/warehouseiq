@@ -18,7 +18,7 @@ const PLACEHOLDER = (
   </div>
 );
 
-export default function ResultCard({ product, query, notFound, onBack, stockAsAt }) {
+export default function ResultCard({ product, query, notFound, onBack, stockAsAt, bagSize }) {
   const [imgError, setImgError] = useState(false);
 
   if (notFound) {
@@ -150,9 +150,28 @@ export default function ResultCard({ product, query, notFound, onBack, stockAsAt
               <SalesChart data={product.sales} />
             </div>
           )}
+
+          {/* Express Post bag size — from past single-part Express Post orders */}
+          <div className="bag-row">
+            <BagIcon />
+            <span className="bag-label">Express Post bag</span>
+            {bagSize
+              ? <span className="bag-size">{bagSize}</span>
+              : <span className="bag-size bag-size--unknown">Not recorded</span>}
+          </div>
         </div>
       </div>
     </div>
+  );
+}
+
+function BagIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+      <path d="M6 2h12l1.5 5H4.5L6 2z" />
+      <path d="M4.5 7h15v13a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2V7z" />
+      <path d="M9 11h6" />
+    </svg>
   );
 }
 
