@@ -528,6 +528,7 @@ body {
   border-top: 1px solid var(--border);
   background: rgba(255,255,255,0.02);
 }
+.bag-row + .chart-section { border-top: 1px solid var(--border); }
 .bag-row svg { color: var(--muted); }
 .bag-label {
   font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;

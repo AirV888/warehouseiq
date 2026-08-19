@@ -143,14 +143,6 @@ export default function ResultCard({ product, query, notFound, onBack, stockAsAt
             </div>
           )}
 
-          {/* Sales chart */}
-          {product.sales && product.sales.length > 0 && (
-            <div className="chart-section">
-              <div className="chart-heading">Monthly Sales History</div>
-              <SalesChart data={product.sales} />
-            </div>
-          )}
-
           {/* Express Post bag size — from past single-part Express Post orders */}
           <div className="bag-row">
             <BagIcon />
@@ -159,6 +151,14 @@ export default function ResultCard({ product, query, notFound, onBack, stockAsAt
               ? <span className="bag-size">{bagSize}</span>
               : <span className="bag-size bag-size--unknown">Not recorded</span>}
           </div>
+
+          {/* Sales chart */}
+          {product.sales && product.sales.length > 0 && (
+            <div className="chart-section">
+              <div className="chart-heading">Monthly Sales History</div>
+              <SalesChart data={product.sales} />
+            </div>
+          )}
         </div>
       </div>
     </div>
