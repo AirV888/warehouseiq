@@ -47,7 +47,7 @@ export default function BinLookup({ products, onBack }) {
 
   const addItem = (p) => {
     setItems((prev) =>
-      prev.some((x) => x.PartID_upper === p.PartID_upper) ? prev : [...prev, p]
+      prev.some((x) => x.PartID_upper === p.PartID_upper) ? prev : [...prev, { ...p, qty: 1 }]
     );
     setQuery('');
     setAdding(false);
@@ -57,6 +57,25 @@ export default function BinLookup({ products, onBack }) {
   const removeItem = (pid) => {
     setItems((prev) => prev.filter((p) => p.PartID_upper !== pid));
   };
+
+  // Pick quantity — always at least 1, capped at a sane 9999.
+  const setQty = (pid, next) => {
+    setItems((prev) =>
+      prev.map((p) => (p.PartID_upper === pid ? { ...p, qty: next } : p))
+    );
+  };
+
+  const bumpQty = (pid, delta) => {
+    setItems((prev) =>
+      prev.map((p) =>
+        p.PartID_upper === pid
+          ? { ...p, qty: Math.min(9999, Math.max(1, (p.qty || 1) + delta)) }
+          : p
+      )
+    );
+  };
+
+  const totalPieces = items.reduce((sum, p) => sum + (Number(p.qty) || 0), 0);
 
   // Focus synchronously inside the tap so mobile opens the keypad immediately.
   const startAdding = () => {
@@ -85,24 +104,36 @@ export default function BinLookup({ products, onBack }) {
         <div className="bin-run-header">
           <h2 className="bin-run-title">BIN RUN</h2>
           <p className="bin-run-sub">
-            {results.length} {results.length === 1 ? 'part' : 'parts'} · sorted by bin
+            {results.length} {results.length === 1 ? 'part' : 'parts'} ·{' '}
+            {results.reduce((sum, p) => sum + (Number(p.qty) || 0), 0).toLocaleString()} pcs to pick · sorted by bin
           </p>
         </div>
 
         <ol className="bin-run-list">
           {results.map((p) => {
             const bin = (p.PartBinAddress || '').trim();
+            const qty = Number(p.qty) || 1;
             const out = p.CurrentStock === 0;
+            const short = !out && qty > p.CurrentStock;
             return (
               <li key={p.PartID_upper} className="bin-run-row">
                 <div className="bin-run-bin">{bin || '—'}</div>
                 <div className="bin-run-info">
                   <div className="bin-run-pid">{p.PartID_upper}</div>
                   <div className="bin-run-desc">{p.PartDescription}</div>
+                  <div
+                    className={`bin-run-stockline${out ? ' bin-run-stockline--out' : ''}${short ? ' bin-run-stockline--short' : ''}`}
+                  >
+                    {out
+                      ? 'OUT OF STOCK'
+                      : short
+                        ? `Only ${p.CurrentStock.toLocaleString()} in stock`
+                        : `${p.CurrentStock.toLocaleString()} in stock`}
+                  </div>
                 </div>
-                <div className={`bin-run-stock${out ? ' bin-run-stock--out' : ''}`}>
-                  <span className="bin-run-stock-num">{p.CurrentStock.toLocaleString()}</span>
-                  <span className="bin-run-stock-lbl">{out ? 'OUT' : 'in stock'}</span>
+                <div className={`bin-run-pick${out || short ? ' bin-run-pick--short' : ''}`}>
+                  <span className="bin-run-pick-num">{qty.toLocaleString()}</span>
+                  <span className="bin-run-pick-lbl">to pick</span>
                 </div>
               </li>
             );
@@ -121,7 +152,7 @@ export default function BinLookup({ products, onBack }) {
 
       <div className="bin-run-header">
         <h2 className="bin-run-title">BIN RUN</h2>
-        <p className="bin-run-sub">Add parts to your pick list, then find their bins.</p>
+        <p className="bin-run-sub">Add parts and quantities, then find their bins.</p>
       </div>
 
       {items.length > 0 && (
@@ -140,6 +171,40 @@ export default function BinLookup({ products, onBack }) {
               >
                 ×
               </button>
+
+              <div className="bin-build-qty">
+                <span className="bin-build-qty-lbl">Qty to pick</span>
+                <button
+                  className="bin-qty-btn"
+                  onClick={() => bumpQty(p.PartID_upper, -1)}
+                  disabled={(p.qty || 1) <= 1}
+                  aria-label={`Decrease quantity for ${p.PartID_upper}`}
+                >
+                  −
+                </button>
+                <input
+                  className="bin-qty-input"
+                  type="tel"
+                  inputMode="numeric"
+                  value={p.qty}
+                  onFocus={(e) => e.target.select()}
+                  onChange={(e) => {
+                    const digits = e.target.value.replace(/[^0-9]/g, '').slice(0, 4);
+                    setQty(p.PartID_upper, digits === '' ? '' : parseInt(digits, 10));
+                  }}
+                  onBlur={() => {
+                    if (!p.qty || p.qty < 1) setQty(p.PartID_upper, 1);
+                  }}
+                  aria-label={`Quantity to pick for ${p.PartID_upper}`}
+                />
+                <button
+                  className="bin-qty-btn"
+                  onClick={() => bumpQty(p.PartID_upper, 1)}
+                  aria-label={`Increase quantity for ${p.PartID_upper}`}
+                >
+                  +
+                </button>
+              </div>
             </li>
           ))}
         </ol>
@@ -196,7 +261,7 @@ export default function BinLookup({ products, onBack }) {
 
       {items.length > 0 && (
         <button className="search-btn bin-find-btn" onClick={findBins}>
-          FIND BINS ({items.length})
+          FIND BINS ({items.length} · {totalPieces.toLocaleString()} PCS)
         </button>
       )}
     </div>
