@@ -181,6 +181,10 @@ def git_push(commit_message: str) -> bool:
     # Self-heal: clear any leftover lock from an interrupted previous run.
     clear_stale_git_locks(repo)
 
+    # Self-heal: OneDrive-synced folders can block git's log writes
+    # ("unable to append to '.git/logs/HEAD'"). This setting avoids that.
+    subprocess.run(['git', 'config', 'windows.appendAtomically', 'false'], cwd=repo)
+
     # Paths to stage: data files, service worker, source code, the refresh script + bat.
     # This way any UI tweak in src/ also rides along with the next data refresh.
     paths_to_stage = [
