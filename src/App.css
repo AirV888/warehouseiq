@@ -546,7 +546,7 @@ body {
 .bin-run-open {
   display: flex; align-items: center; justify-content: center;
   width: 100%;
-  margin-top: 32px;
+  margin-top: 20px;
   min-height: 52px;
   padding: 0 16px;
   background: var(--surface);
@@ -835,4 +835,107 @@ body {
   clip-path: inset(50%);
   opacity: 0;
   pointer-events: none;
+}
+
+/* ─── Box Finder (Warehouse 2) ──────────────────────────── */
+.box-section {
+  margin-top: 28px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+}
+.box-section-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.box-section-title {
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; color: var(--text);
+}
+.box-section-tag {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; color: var(--muted);
+  padding: 3px 8px; border: 1px solid var(--border); border-radius: 999px;
+}
+.box-find-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; min-height: 56px;
+  background: var(--accent); color: #ffffff;
+  border: none; border-radius: var(--radius);
+  font-size: 1rem; font-weight: 800; letter-spacing: 3px;
+  cursor: pointer; -webkit-appearance: none;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.box-find-btn:active { opacity: 0.88; transform: scale(0.99); }
+.box-tiles {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;
+  margin-top: 10px;
+}
+.box-tile {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  min-height: 84px;
+  background: var(--raised);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.8rem; font-weight: 800; letter-spacing: 1.5px;
+  cursor: pointer; -webkit-appearance: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.box-tile--in svg { color: #10B981; }
+.box-tile--move svg { color: #60A5FA; }
+.box-tile--out svg { color: var(--amber); }
+.box-tile:active { background: var(--bg); border-color: var(--muted); }
+
+.box-eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 3px; color: var(--muted);
+  margin-bottom: 4px;
+}
+.box-steps { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.box-step {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+}
+.box-step-num {
+  width: 32px; height: 32px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent); color: #ffffff;
+  border-radius: 50%; font-weight: 800;
+}
+.box-step-text { font-size: 0.95rem; font-weight: 600; }
+.box-soon {
+  margin-top: 18px; padding: 12px 14px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.4);
+  border-radius: 10px;
+  color: var(--amber); font-size: 0.88rem; font-weight: 600;
+}
+
+.last-refresh--header { margin-top: 10px; }
+
+.box-coming {
+  margin-top: 28px;
+  padding: 40px 20px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.box-coming-icon {
+  width: 84px; height: 84px; margin-bottom: 8px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(153,0,0,0.18);
+  border: 2px solid var(--accent);
+  color: var(--text);
+}
+.box-coming-icon svg { width: 40px; height: 40px; }
+.box-coming-title {
+  font-size: 1.6rem; font-weight: 800; letter-spacing: 4px; color: var(--text);
+}
+.box-coming-sub {
+  font-size: 1.05rem; font-weight: 700; letter-spacing: 1px; color: var(--amber);
 }

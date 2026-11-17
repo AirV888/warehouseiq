@@ -4,6 +4,7 @@ import ResultCard from './components/ResultCard';
 import RecentChips from './components/RecentChips';
 import BarcodeModal from './components/BarcodeModal';
 import BinLookup from './components/BinLookup';
+import BoxFinder, { BoxIcon } from './components/BoxFinder';
 import useProducts from './hooks/useProducts';
 import './App.css';
 
@@ -25,6 +26,7 @@ export default function App() {
   const [notFound, setNotFound] = useState(false);
   const [scanMode, setScanMode] = useState(false);
   const [binMode, setBinMode] = useState(false);
+  const [boxMode, setBoxMode] = useState(null); // null | 'find' | 'checkin' | 'move' | 'checkout'
   const [recent, setRecent] = useState(getRecent);
 
   const addRecent = useCallback((partIdUpper) => {
@@ -97,7 +99,9 @@ export default function App() {
         <BarcodeModal onDetect={searchByBarcode} onClose={() => setScanMode(false)} />
       )}
 
-      {binMode ? (
+      {boxMode ? (
+        <BoxFinder mode={boxMode} onBack={() => setBoxMode(null)} />
+      ) : binMode ? (
         <BinLookup products={products} onBack={() => setBinMode(false)} />
       ) : (result || notFound) ? (
         <ResultCard
@@ -114,6 +118,11 @@ export default function App() {
             <img className="header-logo" src="/logo.png" alt="BoonmaIQ logo" />
             <h1 className="app-title">BoonmaIQ</h1>
             <p className="app-subtitle">PART FINDER</p>
+            {stockAsAt && (
+              <p className="last-refresh last-refresh--header">
+                Last Refresh - <span className="last-refresh-date">{stockAsAt}</span>
+              </p>
+            )}
           </header>
 
           <main>
@@ -125,15 +134,34 @@ export default function App() {
               onSelect={handleSelect}
               products={products}
             />
-            {stockAsAt && (
-              <p className="last-refresh">
-                Last Refresh - <span className="last-refresh-date">{stockAsAt}</span>
-              </p>
-            )}
 
             <button className="bin-run-open" onClick={() => setBinMode(true)}>
               <BinRunIcon /> FIND MULTIPLE BINS
             </button>
+
+            <section className="box-section" aria-label="Box Finder">
+              <div className="box-section-head">
+                <span className="box-section-title">BOX FINDER</span>
+                <span className="box-section-tag">WAREHOUSE 2 &amp; 3</span>
+              </div>
+              <button className="box-find-btn" onClick={() => setBoxMode('find')}>
+                <BoxIcon kind="find" /> FIND A BOX
+              </button>
+              <div className="box-tiles">
+                <button className="box-tile box-tile--in" onClick={() => setBoxMode('checkin')}>
+                  <BoxIcon kind="checkin" />
+                  <span>CHECK IN</span>
+                </button>
+                <button className="box-tile box-tile--move" onClick={() => setBoxMode('move')}>
+                  <BoxIcon kind="move" />
+                  <span>MOVE</span>
+                </button>
+                <button className="box-tile box-tile--out" onClick={() => setBoxMode('checkout')}>
+                  <BoxIcon kind="checkout" />
+                  <span>CHECK OUT</span>
+                </button>
+              </div>
+            </section>
 
             <RecentChips items={recent} onSelect={search} />
           </main>
